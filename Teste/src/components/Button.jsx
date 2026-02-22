@@ -1,5 +1,5 @@
-export const Button = () => {
+export const Button = ({ disabled, label }) => {
   return (
-    <button>Click me</button>
+    <button disabled={disabled}>{label}</button>
   )
 }

@@ -5,7 +5,7 @@ import "@testing-library/jest-dom/vitest"
 
 test("Button renders", () => {
     
-    render(<Button label={"Click me"}/>)
+    render(<Button disabled = {true} label={"Click me"}/>)
 
     const button = screen.getByRole('button')
 
@@ -14,9 +14,9 @@ test("Button renders", () => {
 
 test("Button is disabled", () => {
     
-    render(<Button disabled/>)
+    render(<Button disabled = {true} label={"Click me"}/>)
 
     const button = screen.getByRole('button')
 
-    expect(button).toBeDisabled('Click me')
+    expect(button).toBeDisabled()
 });
